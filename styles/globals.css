@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background: #010c15;
+  overflow: hidden;
+}
+
+.linear {
+  background: linear-gradient(
+    150.26deg,
+    rgba(23, 85, 83, 0.7) 1.7%,
+    rgba(67, 217, 173, 0.091) 81.82%
+  );
+}
+
+.firstBg {
+  position: absolute;
+  width: 35%;
+  height: 392px;
+  background: #43d9ad;
+  opacity: 0.4;
+  filter: blur(87px);
+  transform: rotate(-94.3deg);
+}
+
+.secondBg {
+  position: absolute;
+  width: 35%;
+  height: 392px;
+
+  background: #4d5bce;
+  opacity: 0.4;
+  filter: blur(87px);
+  transform: rotate(13.51deg);
+}
+
+.heroCard {
+  background: rgba(1, 22, 39, 0.84);
+  box-shadow: inset 1px 5px 11px rgba(2, 18, 27, 0.71);
+  border-radius: 8px;
+}
+
+.detailsBtnBg {
+  background-image: radial-gradient(circle, #733e96, #484ab1, #3c3d9a);
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 1200px) {
+  .normal-text {
+    writing-mode: horizontal-tb;
+    white-space: normal;
+    overflow: auto;
+    text-overflow: ellipsis;
+    transform: rotate(270deg);
+  }
+}
+
+.normal-text {
+  writing-mode: vertical-rl;
+  transform: rotate(270deg);
+}
+
+:root {
+  --primary: black;
+  --secondary: rgb(12, 69, 134);
+  /* --tertiary: rgba(31, 209, 253, 0.6); */
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+*::-webkit-scrollbar {
+  width: 17px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 14px;
+  border: 3px solid var(--primary);
+}
